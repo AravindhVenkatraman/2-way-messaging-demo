@@ -15,12 +15,12 @@ const App = () => {
   
   if(component === 0) {
     return <>
-        <button onClick={logout}>Logout</button>
+        <button className="logoutBtn" onClick={logout}>Logout</button>
         <ChatEngineIO />
       </>
   } else if(component === 1) {
     return <>
-        <button onClick={logout}>Logout</button>
+        <button className="logoutBtn" onClick={logout}>Logout</button>
         <StreamChatApp />
       </>
   } else if(component === 2) {

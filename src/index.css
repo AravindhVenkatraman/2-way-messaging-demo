@@ -137,6 +137,24 @@ body {
   border-radius: 4px;
   color: white;
   float: left;
+  cursor: pointer;
+}
+
+.component {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  border-color: #e2d5d5;
+  cursor: pointer;
+}
+
+.logoutBtn {
+  background-color: red;
+  margin: 5px;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .formElement {

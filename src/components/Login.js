@@ -55,6 +55,7 @@ const Login = () => {
         <div>
             <div className='header'>
                 <button type='button'
+                        style={{backgroundColor : chatComponent === 0 ? '#ffc584' : ''}}
                         className='component'
                         onClick={(e) => {
                             e.preventDefault();
@@ -64,12 +65,14 @@ const Login = () => {
                     rect-chat-engine
                 </button>
                 <button type='button'
+                        style={{backgroundColor : chatComponent === 1 ? '#ffc584' : ''}}
                         className='component'
                         onClick={(e) => {
                             e.preventDefault();
                             setChatComponent(1);
                         }}>stream-chat</button>
                 <button type='button'
+                        disabled
                         className='component'
                         onClick={(e) => {
                             e.preventDefault();
@@ -79,6 +82,7 @@ const Login = () => {
                     react-chat-elements
                 </button>
                 <button type='button'
+                        disabled
                         className='component'
                         onClick={(e) => {
                             e.preventDefault();
