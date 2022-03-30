@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b899d3aa30b55eef2b235690bc049635",
+    "revision": "adaf9ee65c38d8b2c39df4be18032c89",
     "url": "/2-way-messaging-demo/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/2-way-messaging-demo/static/css/2.04cd50ce.chunk.css"
   },
   {
-    "revision": "47a7e03983df0fd3a5ac",
-    "url": "/2-way-messaging-demo/static/css/main.5f78491d.chunk.css"
+    "revision": "77eb8a2782cd583112fe",
+    "url": "/2-way-messaging-demo/static/css/main.f58a2b70.chunk.css"
   },
   {
     "revision": "198f6bce14d602fa548f",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/2-way-messaging-demo/static/js/5.a12b7e29.chunk.js"
   },
   {
-    "revision": "47a7e03983df0fd3a5ac",
-    "url": "/2-way-messaging-demo/static/js/main.8ced70d3.chunk.js"
+    "revision": "77eb8a2782cd583112fe",
+    "url": "/2-way-messaging-demo/static/js/main.c607db6d.chunk.js"
   },
   {
     "revision": "03c2f387a35e3d9114d2",

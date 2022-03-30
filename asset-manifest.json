@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/2-way-messaging-demo/static/css/main.5f78491d.chunk.css",
-    "main.js": "/2-way-messaging-demo/static/js/main.8ced70d3.chunk.js",
-    "main.js.map": "/2-way-messaging-demo/static/js/main.8ced70d3.chunk.js.map",
+    "main.css": "/2-way-messaging-demo/static/css/main.f58a2b70.chunk.css",
+    "main.js": "/2-way-messaging-demo/static/js/main.c607db6d.chunk.js",
+    "main.js.map": "/2-way-messaging-demo/static/js/main.c607db6d.chunk.js.map",
     "runtime-main.js": "/2-way-messaging-demo/static/js/runtime-main.f21be725.js",
     "runtime-main.js.map": "/2-way-messaging-demo/static/js/runtime-main.f21be725.js.map",
     "static/css/2.04cd50ce.chunk.css": "/2-way-messaging-demo/static/css/2.04cd50ce.chunk.css",
@@ -15,10 +15,10 @@
     "static/js/5.a12b7e29.chunk.js": "/2-way-messaging-demo/static/js/5.a12b7e29.chunk.js",
     "static/js/5.a12b7e29.chunk.js.map": "/2-way-messaging-demo/static/js/5.a12b7e29.chunk.js.map",
     "index.html": "/2-way-messaging-demo/index.html",
-    "precache-manifest.afe29e15128918d40daeac93702df0b1.js": "/2-way-messaging-demo/precache-manifest.afe29e15128918d40daeac93702df0b1.js",
+    "precache-manifest.da053671e271f76fa0911935442cea5b.js": "/2-way-messaging-demo/precache-manifest.da053671e271f76fa0911935442cea5b.js",
     "service-worker.js": "/2-way-messaging-demo/service-worker.js",
     "static/css/2.04cd50ce.chunk.css.map": "/2-way-messaging-demo/static/css/2.04cd50ce.chunk.css.map",
-    "static/css/main.5f78491d.chunk.css.map": "/2-way-messaging-demo/static/css/main.5f78491d.chunk.css.map",
+    "static/css/main.f58a2b70.chunk.css.map": "/2-way-messaging-demo/static/css/main.f58a2b70.chunk.css.map",
     "static/js/2.fada429e.chunk.js.LICENSE.txt": "/2-way-messaging-demo/static/js/2.fada429e.chunk.js.LICENSE.txt",
     "static/media/index.css": "/2-way-messaging-demo/static/media/NotoColorEmoji-flags.0daa6ab9.woff2",
     "static/media/str-chat__connection-error.svg": "/2-way-messaging-demo/static/media/str-chat__connection-error.b3aba88d.svg"
@@ -27,7 +27,7 @@
     "static/js/runtime-main.f21be725.js",
     "static/css/2.04cd50ce.chunk.css",
     "static/js/2.fada429e.chunk.js",
-    "static/css/main.5f78491d.chunk.css",
-    "static/js/main.8ced70d3.chunk.js"
+    "static/css/main.f58a2b70.chunk.css",
+    "static/js/main.c607db6d.chunk.js"
   ]
 }
