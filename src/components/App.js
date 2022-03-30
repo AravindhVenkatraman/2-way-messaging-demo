@@ -8,7 +8,7 @@ const App = () => {
   const logout = (e) => {
     localStorage.removeItem('username');
     localStorage.removeItem('password');
-    window.location.href = "/";
+    window.location.href = "/2-way-messaging-demo";
   }
   let component = JSON.parse(localStorage.getItem('component'));
   console.log(component);
