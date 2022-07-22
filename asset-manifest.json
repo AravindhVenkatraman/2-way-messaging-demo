@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/2-way-messaging-demo/static/css/main.634f3e40.chunk.css",
-    "main.js": "/2-way-messaging-demo/static/js/main.0c3818fc.chunk.js",
-    "main.js.map": "/2-way-messaging-demo/static/js/main.0c3818fc.chunk.js.map",
+    "main.js": "/2-way-messaging-demo/static/js/main.51d581ac.chunk.js",
+    "main.js.map": "/2-way-messaging-demo/static/js/main.51d581ac.chunk.js.map",
     "runtime-main.js": "/2-way-messaging-demo/static/js/runtime-main.d148e904.js",
     "runtime-main.js.map": "/2-way-messaging-demo/static/js/runtime-main.d148e904.js.map",
     "static/css/2.3995669a.chunk.css": "/2-way-messaging-demo/static/css/2.3995669a.chunk.css",
-    "static/js/2.b86eb1b6.chunk.js": "/2-way-messaging-demo/static/js/2.b86eb1b6.chunk.js",
-    "static/js/2.b86eb1b6.chunk.js.map": "/2-way-messaging-demo/static/js/2.b86eb1b6.chunk.js.map",
+    "static/js/2.b06d9b9b.chunk.js": "/2-way-messaging-demo/static/js/2.b06d9b9b.chunk.js",
+    "static/js/2.b06d9b9b.chunk.js.map": "/2-way-messaging-demo/static/js/2.b06d9b9b.chunk.js.map",
     "index.html": "/2-way-messaging-demo/index.html",
     "static/css/2.3995669a.chunk.css.map": "/2-way-messaging-demo/static/css/2.3995669a.chunk.css.map",
     "static/css/main.634f3e40.chunk.css.map": "/2-way-messaging-demo/static/css/main.634f3e40.chunk.css.map",
-    "static/js/2.b86eb1b6.chunk.js.LICENSE.txt": "/2-way-messaging-demo/static/js/2.b86eb1b6.chunk.js.LICENSE.txt"
+    "static/js/2.b06d9b9b.chunk.js.LICENSE.txt": "/2-way-messaging-demo/static/js/2.b06d9b9b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d148e904.js",
     "static/css/2.3995669a.chunk.css",
-    "static/js/2.b86eb1b6.chunk.js",
+    "static/js/2.b06d9b9b.chunk.js",
     "static/css/main.634f3e40.chunk.css",
-    "static/js/main.0c3818fc.chunk.js"
+    "static/js/main.51d581ac.chunk.js"
   ]
 }
