@@ -440,6 +440,7 @@ class CometChatMessageComposer extends React.PureComponent {
 				// Setting up base64 URL on image
 
 				const newFile = new File([reader.result], uploadedFile.name, uploadedFile);
+				console.log(newFile);
 				this.sendMediaMessage(newFile, CometChat.MESSAGE_TYPE.IMAGE);
 			},
 			false,

@@ -15,6 +15,7 @@ const Login = () => {
         '@chatscope/chat-ui-kit-react',
         'react-chat-widget',
         '@cometchat-pro/chat',
+        '@progresss/kendo-react-conversational-ui',
     ]
 
     useEffect(() => {
@@ -33,7 +34,7 @@ const Login = () => {
 
         try {
             if(chatComponent === 0) {
-                await axios.get('https://api.chatengine.io/chats', { headers: chatEngineAuthObj });
+                //await axios.get('https://api.chatengine.io/chats', { headers: chatEngineAuthObj });
                 localStorage.setItem('username', username);
                 localStorage.setItem('password', password);
                 localStorage.setItem('component', chatComponent);
@@ -45,19 +46,27 @@ const Login = () => {
                 window.location.reload();
             } else if(chatComponent === 2) {
                 console.log("axios result :: ", chatComponent);
+                localStorage.setItem('username', username);
+                localStorage.setItem('component', chatComponent);
+                window.location.reload();
             } else if(chatComponent === 3) {
                 console.log("axios result :: ", chatComponent);
+                localStorage.setItem('username', username);
+                localStorage.setItem('component', chatComponent);
+                window.location.reload();
             } else if(chatComponent === 4) {
                 console.log("axios result :: ", chatComponent);
+                localStorage.setItem('username', username);
+                localStorage.setItem('component', chatComponent);
+                window.location.reload();
             } else if(chatComponent === 5) {
                 console.log("debugger");
                 CometChat.getLoggedinUser().then(
                     user => {
-                        console.log(user);
                         if(!user) {
                             CometChat.login(username, cometChatAuthKey).then(
                                 user => {
-                                    console.log("Login Successful:", { user });
+                                    // console.log("Login Successful:", { user });
                                     localStorage.setItem('username', username);
                                     localStorage.setItem('component', chatComponent);
                                     window.location.reload();
@@ -74,6 +83,10 @@ const Login = () => {
                     }, error => {
                         console.log("Something went wrong", error);
                     });
+            } else if(chatComponent === 6) {
+                localStorage.setItem('username', username);
+                localStorage.setItem('component', chatComponent);
+                window.location.reload();
             }
         } catch (error) {
             localStorage.removeItem('username');
@@ -102,7 +115,6 @@ const Login = () => {
                             setChatComponent(1);
                         }}>stream-chat</button>
                 <button type='button'
-                        disabled
                         style={{backgroundColor : chatComponent === 2 ? '#ffc584' : ''}}
                         className='component'
                         onClick={(e) => {
@@ -113,7 +125,6 @@ const Login = () => {
                     react-chat-elements
                 </button>
                 <button type='button'
-                        disabled
                         style={{backgroundColor : chatComponent === 3 ? '#ffc584' : ''}}
                         className='component'
                         onClick={(e) => {
@@ -124,7 +135,6 @@ const Login = () => {
                     @chatscope/chat-ui-kit-react
                 </button>
                 <button type='button'
-                        disabled
                         style={{backgroundColor : chatComponent === 4 ? '#ffc584' : ''}}
                         className='component'
                         onClick={(e) => {
@@ -144,13 +154,23 @@ const Login = () => {
                 >
                     @cometchat-pro/chat
                 </button>
+                <button type='button'
+                        style={{backgroundColor : chatComponent === 6 ? '#ffc584' : ''}}
+                        className='component'
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setChatComponent(6);
+                        }}
+                >
+                    @progresss/kendo-react-conversational-ui
+                </button>
             </div>
             <div className='loginForm'>
                 <form onSubmit={handleSumbit}>
                     <h3 className='formElement'>{chatComponents[chatComponent]} Login</h3>
                     <h5 className='error'>{error}</h5>
                     <div className='formElement'>
-                        <input className='input' type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)} />
+                        <input className='input' type='text' placeholder={chatComponent === 5 ? 'UID' : 'Username'} value={username} onChange={(e) => setUsername(e.target.value)} />
                     </div>
                     {chatComponent !== 5 && <div className='formElement'>
                         <input className='input' type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />

@@ -5,8 +5,13 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
+    "@chatscope/chat-ui-kit-react": "^1.8.3",
+    "@chatscope/chat-ui-kit-styles": "^1.2.3",
     "@cometchat-pro/chat": "^3.0.6",
     "@emotion/react": "^11.8.2",
+    "@progress/kendo-licensing": "^1.2.2",
+    "@progress/kendo-react-buttons": "^5.1.0",
+    "@progress/kendo-react-conversational-ui": "^5.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
