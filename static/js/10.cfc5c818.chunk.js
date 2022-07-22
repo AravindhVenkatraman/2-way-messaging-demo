@@ -1,2 +1,0 @@
-(this["webpackJsonpunichat-template"]=this["webpackJsonpunichat-template"]||[]).push([[10],{829:function(t,a,e){"use strict";e.r(a),a.default=e.p+"static/media/outgoingmessage.ab0b9c0e.wav"}}]);
-//# sourceMappingURL=10.cfc5c818.chunk.js.map
