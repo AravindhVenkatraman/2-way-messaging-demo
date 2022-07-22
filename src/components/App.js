@@ -74,7 +74,7 @@ const App = () => {
     console.log(e);
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
       let updatedConstraints = { video: { deviceId: { exact: (e && e.target) ? e.target.value : "" } } }
-      if (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+      if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
         updatedConstraints = { video: { groupId: { exact: (e && e.target) ? e.target.value : "" } } }
       }
       console.log(updatedConstraints);
@@ -95,7 +95,7 @@ const App = () => {
         label = videoDevice.label;
       }
       let value = videoDevice.deviceId;
-      if (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+      if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
         value = videoDevice.groupId;
       }
       return `<option value="${value}">${label}</option>`;
