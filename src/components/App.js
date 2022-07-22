@@ -71,9 +71,6 @@ const App = () => {
   console.log(controls);
   const cameraOptions = document.querySelector('.video-options>select');
   const video = document.querySelector('video');
-  // const canvas = document.querySelector('canvas');
-  // const screenshotImage = document.querySelector('img');
-  // const buttons = [...controls.querySelectorAll('button')];
   let constraints = {
     video: {
       width: {
@@ -94,7 +91,6 @@ const App = () => {
   const cameraChange = (e) => {
     console.log(e);
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-      constraints.video.deviceId.exact = (e && e.target) ? e.target.value : "";
       let updatedConstraints = { video: { deviceId: { exact: (e && e.target) ? e.target.value : "" } } }
 
       console.log(updatedConstraints);
@@ -106,13 +102,13 @@ const App = () => {
   const getCameraSelection = async () => {
     const devices = await navigator.mediaDevices.enumerateDevices();
     let videoDevices = devices.filter(device => device.kind === 'videoinput');
+    console.log(videoDevices);
     let options = ["<option value=''>Select camera</option>"];
     let optionsArr = videoDevices.map(videoDevice => {
       return `<option value="${videoDevice.deviceId}">${videoDevice.label}</option>`;
     });
-    console.log(optionsArr);
-    console.log(options);
     options = options.concat(optionsArr);
+    console.log(options);
     cameraOptions.innerHTML = options.join('');
   };
 
