@@ -69,14 +69,14 @@ const App = () => {
 
   const cameraOptions = document.querySelector('.video-options>select');
   const video = document.querySelector('video');
-
+  console.log(navigator);
   const cameraChange = (e) => {
     console.log(e);
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-      let updatedConstraints = { video: { deviceId: { exact: (e && e.target) ? e.target.value : "" } } }
-      if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
-        updatedConstraints = { video: { groupId: { exact: (e && e.target) ? e.target.value : "" } } }
-      }
+      // let updatedConstraints = { video: { deviceId: { exact: (e && e.target) ? e.target.value : "" } } }
+      // if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+      let updatedConstraints = { video: { groupId: { exact: (e && e.target) ? e.target.value : "" } } }
+      // }
       console.log(updatedConstraints);
       startStream(updatedConstraints);
     }
@@ -94,10 +94,14 @@ const App = () => {
       if (videoDevice.label.length !== 0) {
         label = videoDevice.label;
       }
-      let value = videoDevice.deviceId;
-      if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+      let value = "";
+      if (videoDevice.deviceId.length === 0) {
         value = videoDevice.groupId;
+      } else {
+        value = videoDevice.deviceId;
       }
+      /* if (navigator.platform && /iPad|iPhone|iPod|Mac/.test(navigator.platform)) {
+      } */
       return `<option value="${value}">${label}</option>`;
     });
     options = options.concat(optionsArr);
