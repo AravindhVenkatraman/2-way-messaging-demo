@@ -73,10 +73,10 @@ const App = () => {
   const cameraChange = (e) => {
     console.log(e);
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-      // let updatedConstraints = { video: { deviceId: { exact: (e && e.target) ? e.target.value : "" } } }
-      // if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
-      let updatedConstraints = { video: { groupId: { exact: (e && e.target) ? e.target.value : "" } } }
-      // }
+      let updatedConstraints = { video: { deviceId: { exact: (e && e.target) ? e.target.value : "" } } }
+      if ((e && e.target) && e.target.name === "groupId") {
+        updatedConstraints = { video: { groupId: { exact: (e && e.target) ? e.target.value : "" } } }
+      }
       console.log(updatedConstraints);
       startStream(updatedConstraints);
     }
@@ -88,21 +88,22 @@ const App = () => {
     const devices = await navigator.mediaDevices.enumerateDevices();
     let videoDevices = devices.filter(device => device.kind === 'videoinput');
     console.log(videoDevices);
-    let options = ["<option value=''>Select camera</option>"];
+    let options = ["<option value='' name=''>Select camera</option>"];
     let optionsArr = videoDevices.map((videoDevice, index) => {
       let label = "Camera-" + index + 1;
       if (videoDevice.label.length !== 0) {
         label = videoDevice.label;
       }
       let value = "";
-      if (videoDevice.deviceId.length === 0) {
-        value = videoDevice.groupId;
-      } else {
+      let name = ""
+      if (videoDevice.deviceId.length > 0) {
         value = videoDevice.deviceId;
+        name = "deviceId"
+      } else {
+        value = videoDevice.groupId;
+        name = "groupId"
       }
-      /* if (navigator.platform && /iPad|iPhone|iPod|Mac/.test(navigator.platform)) {
-      } */
-      return `<option value="${value}">${label}</option>`;
+      return `<option value="${value}" name="${name}">${label}</option>`;
     });
     options = options.concat(optionsArr);
     console.log(options);
