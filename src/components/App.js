@@ -74,7 +74,7 @@ const App = () => {
   // const canvas = document.querySelector('canvas');
   // const screenshotImage = document.querySelector('img');
   // const buttons = [...controls.querySelectorAll('button')];
-  const constraints = {
+  let constraints = {
     video: {
       width: {
         min: 1280,
@@ -86,16 +86,17 @@ const App = () => {
         ideal: 1080,
         max: 1440
       },
+      deviceId: {
+        exact: "",
+      }
     }
   };
   const cameraChange = (e) => {
     console.log(e);
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
+      constraints.video.deviceId.exact = (e && e.target) ? e.target.value : "";
       const updatedConstraints = {
         ...constraints,
-        deviceId: {
-          exact: (e && e.target) ? e.target.value : null,
-        }
       };
       console.log(updatedConstraints);
       startStream(updatedConstraints);
@@ -117,7 +118,7 @@ const App = () => {
   };
 
   const startStream = async (constraints) => {
-    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: { facingMode: { exact: "environment" } } });
     console.log(stream);
     handleStream(stream);
   };
