@@ -95,9 +95,8 @@ const App = () => {
     console.log(e);
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
       constraints.video.deviceId.exact = (e && e.target) ? e.target.value : "";
-      const updatedConstraints = {
-        ...constraints,
-      };
+      let updatedConstraints = { video: { deviceId: { exact: (e && e.target) ? e.target.value : "" } } }
+
       console.log(updatedConstraints);
       startStream(updatedConstraints);
     }
@@ -118,7 +117,7 @@ const App = () => {
   };
 
   const startStream = async (constraints) => {
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: { facingMode: { exact: "environment" } } });
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
     console.log(stream);
     handleStream(stream);
   };
