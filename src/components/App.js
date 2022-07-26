@@ -74,7 +74,7 @@ const App = () => {
     console.log(e);
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
       let updatedConstraints = { video: { deviceId: { exact: (e && e.target) ? e.target.value : "" } } }
-      if ((e && e.target) && e.target.name === "groupId") {
+      if (e && e.target && e.target.name === "groupId") {
         updatedConstraints = { video: { groupId: { exact: (e && e.target) ? e.target.value : "" } } }
       }
       console.log(updatedConstraints);
@@ -85,6 +85,7 @@ const App = () => {
   document.getElementById("camera-select").addEventListener("change", cameraChange);
 
   const getCameraSelection = async () => {
+    await navigator.mediaDevices.getUserMedia({audio: true, video: true});   
     const devices = await navigator.mediaDevices.enumerateDevices();
     let videoDevices = devices.filter(device => device.kind === 'videoinput');
     console.log(videoDevices);
